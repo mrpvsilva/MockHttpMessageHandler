@@ -12,7 +12,12 @@ namespace MockHttpMessageHandler.Tests
 {
     public class TestFixture : WebApplicationFactory<Startup>
     {
-        public Mock<HttpMessageHandler> HttpMessageHandlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
+        public Mock<HttpMessageHandler> HttpMessageHandlerMock { get; private set; }
+
+        public TestFixture()
+        {
+            HttpMessageHandlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
+        }
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
             builder.ConfigureServices(services =>
