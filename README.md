@@ -1,0 +1,11 @@
+# MockHttpMessageHandler
+
+Exemplo simples de um projeto .Net Core 3.1, com a utilização correta da classe HttpClient para evitar _esgotamento de soquetes_. E com testes de integração mockando o HttpMessageHandler num request para apis externas.
+
+# Referências
+
+[Testes de integração no ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/test/integration-tests?view=aspnetcore-3.1)
+
+[IHttpClientFactory](https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)
+
+[Usando HttpClientFactory e Polly para retry em APIs .NET Core](https://www.youtube.com/watch?v=WsqtkO20mLo)
