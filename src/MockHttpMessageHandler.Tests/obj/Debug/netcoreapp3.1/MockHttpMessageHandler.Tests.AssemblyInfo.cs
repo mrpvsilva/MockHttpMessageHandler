@@ -11,6 +11,9 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MockHttpMessageHandler.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=n" +
+    "ull", "C:\\Users\\vstpalu\\source\\repos\\MockHttpMessageHandler\\src\\MockHttpMessageHandler.W" +
+    "ebApi", "MockHttpMessageHandler.WebApi.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MockHttpMessageHandler.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
