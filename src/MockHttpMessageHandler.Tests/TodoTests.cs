@@ -1,9 +1,14 @@
-﻿using Moq;
+﻿using FluentAssertions;
+using MockHttpMessageHandler.WebApi.Models;
+using Moq;
 using Moq.Protected;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -39,13 +44,18 @@ namespace MockHttpMessageHandler.Tests
                     .ReturnsAsync(new HttpResponseMessage()
                     {
                         StatusCode = HttpStatusCode.OK,
-                        Content = new StringContent("[{\"userId\": 1, \"id\": 1,\"title\":\"delectus aut autem\", \"completed\": false  }]")
+                        Content = new StringContent("[{\"userId\": 1, \"id\": 1,\"title\":\"delectus aut autem\", \"completed\": false  }]", Encoding.UTF8, "application/json")
                     })
                     .Verifiable();
             //act
             var response = await _client.GetAsync("api/todos");
+            var data = await response.Content.ReadFromJsonAsync<IEnumerable<Todo>>();
             //assert
             response.EnsureSuccessStatusCode();
+            data
+                .Should()
+                .HaveCount(1);
+
         }
     }
 }

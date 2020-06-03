@@ -5,6 +5,7 @@ using MockHttpMessageHandler.WebApi;
 using MockHttpMessageHandler.WebApi.Services;
 using Moq;
 using System;
+using System.Linq;
 using System.Net.Http;
 
 namespace MockHttpMessageHandler.Tests
@@ -16,6 +17,14 @@ namespace MockHttpMessageHandler.Tests
         {
             builder.ConfigureServices(services =>
             {
+                // Remove the app's ITodoService registration.
+                var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(ITodoService));
+
+                if (descriptor != null)
+                {
+                    services.Remove(descriptor);
+                }
+
                 services
                 .AddHttpClient<ITodoService, TodoService>(x => x.BaseAddress = new Uri("http://localhost:3000"))
                 .ConfigurePrimaryHttpMessageHandler(x => HttpMessageHandlerMock.Object);
