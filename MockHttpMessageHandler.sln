@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockHttpMessageHandler.Tests", "src\MockHttpMessageHandler.Tests\MockHttpMessageHandler.Tests.csproj", "{E21F94FC-8E65-4C26-9A70-300E0937D894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockHttpMessageHandler.WebApi", "src\MockHttpMessageHandler.WebApi\MockHttpMessageHandler.WebApi.csproj", "{4A3A4EEC-5012-496D-91AC-A4F1D65F38C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E21F94FC-8E65-4C26-9A70-300E0937D894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21F94FC-8E65-4C26-9A70-300E0937D894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21F94FC-8E65-4C26-9A70-300E0937D894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21F94FC-8E65-4C26-9A70-300E0937D894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3A4EEC-5012-496D-91AC-A4F1D65F38C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3A4EEC-5012-496D-91AC-A4F1D65F38C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3A4EEC-5012-496D-91AC-A4F1D65F38C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3A4EEC-5012-496D-91AC-A4F1D65F38C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28702BC8-228E-4432-A416-77E5EE5A9F0E}
+	EndGlobalSection
+EndGlobal
