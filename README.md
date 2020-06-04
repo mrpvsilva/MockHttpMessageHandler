@@ -1,6 +1,6 @@
 # MockHttpMessageHandler
 
-Exemplo simples de um projeto .Net Core 3.1, com a utilização correta da classe HttpClient para evitar _esgotamento de soquetes_. E com testes de integração mockando o HttpMessageHandler num request para apis externas.
+Exemplo simples de um projeto .Net Core 3.1, com a utilização correta da classe HttpClient para evitar _esgotamento de soquetes_. E com testes de integração mockando o HttpMessageHandler ao realizar request para apis externas.
 
 # Referências
 
